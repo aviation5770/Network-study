@@ -22,8 +22,8 @@ print('접속 완료')
 sender = threading.Thread(target=send, args=(clientSock,))
 receiver = threading.Thread(target=receive, args=(clientSock,))
 
-sender().start()
-receiver().start()
+sender.start()
+receiver.start()
 
 while True :
   time.sleep(1)
